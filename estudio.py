@@ -1,14 +1,12 @@
-    <py-config>
-        packages = [
-            "matplotlib"
-        ]
-        plugins = [
-            "https://pyscript.net/latest/plugins/python/py_tutor.py"
-        ]
-    </py-config>
-
-    <script type="py">
-
+<py-config>
+    packages = [
+        "matplotlib"
+    ]
+    plugins = [
+        "https://pyscript.net/latest/plugins/python/py_tutor.py"
+    ]
+</py-config>
+<script type="py">
     import pandas as pd
     import numpy as np
     import matplotlib.pyplot as plt 
@@ -90,4 +88,4 @@
 
     print("El promedio del codigo de distrito")
     print(df_accidentes["cod_distrito"].mean())
-    </script>
+</script>
