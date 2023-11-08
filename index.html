@@ -9,6 +9,7 @@
 <body>
     <py-config>
         packages = [
+            "pandas",  // Add "pandas" to the list of packages to install
             "matplotlib"
         ]
         plugins = [
@@ -22,12 +23,13 @@
         from google.colab import drive
     
         drive.mount("/content/drive")
+        
         df_accidentes = pd.read_excel("/content/drive/MyDrive/AccidentesBicicletas_2023.xlsx")
         df_accidentes
     
         df_accidentes.isna().sum()
     
-        df_accidentes["estado_meteorológico"]=df_accidentes["estado_meteorológico"].fillna(value="Se desconoce")
+        df_accidentes["estado_meteorológico"] = df_accidentes["estado_meteorológico"].fillna(value="Se desconoce")
         conteo_edomet = df_accidentes["estado_meteorológico"].value_counts()
         print(conteo_edomet)
     
@@ -36,7 +38,7 @@
         plt.ylabel("Frecuencia")
         plt.title("Estado metereologico cuando ocurre accidente")
     
-        df_accidentes["tipo_accidente"]=df_accidentes["tipo_accidente"].fillna(value="NULL")
+        df_accidentes["tipo_accidente"] = df_accidentes["tipo_accidente"].fillna(value="NULL")
         conteo_edomet2 = df_accidentes["tipo_accidente"].value_counts()
         print(conteo_edomet2)
     
@@ -45,7 +47,7 @@
         plt.ylabel("Frecuencia")
         plt.title("Tipo de accidente")
     
-        df_accidentes["tipo_vehiculo"]=df_accidentes["tipo_vehiculo"].fillna(value="NULL")
+        df_accidentes["tipo_vehiculo"] = df_accidentes["tipo_vehiculo"].fillna(value="NULL")
         conteo_edomet3 = df_accidentes["tipo_vehiculo"].value_counts()
         print(conteo_edomet3)
     
@@ -54,7 +56,7 @@
         plt.ylabel("Frecuencia")
         plt.title("Tipo de Vehiculo")
     
-        df_accidentes["tipo_persona"]=df_accidentes["tipo_persona"].fillna(value="NULL")
+        df_accidentes["tipo_persona"] = df_accidentes["tipo_persona"].fillna(value="NULL")
         conteo_edomet4 = df_accidentes["tipo_persona"].value_counts()
         print(conteo_edomet4)
     
@@ -63,7 +65,7 @@
         plt.ylabel("Frecuencia")
         plt.title("Tipo de persona")
     
-        df_accidentes["sexo"]=df_accidentes["sexo"].fillna(value="NULL")
+        df_accidentes["sexo"] = df_accidentes["sexo"].fillna(value="NULL")
         conteo_edomet5 = df_accidentes["sexo"].value_counts()
         print(conteo_edomet5)
     
@@ -72,7 +74,7 @@
         plt.ylabel("Frecuencia")
         plt.title("Sexo de accidentado")
     
-        df_accidentes["lesividad"]=df_accidentes["lesividad"].fillna(value="NULL")
+        df_accidentes["lesividad"] = df_accidentes["lesividad"].fillna(value="NULL")
         conteo_edomet6 = df_accidentes["lesividad"].value_counts()
         print(conteo_edomet6)
     
@@ -81,7 +83,7 @@
         plt.ylabel("Frecuencia")
         plt.title("Lesividad de accidente") 
     
-        df_accidentes["distrito"]=df_accidentes["distrito"].fillna(value="NULL")
+        df_accidentes["distrito"] = df_accidentes["distrito"].fillna(value="NULL")
         conteo_edomet7 = df_accidentes["distrito"].value_counts()
         print(conteo_edomet7)
     
@@ -95,4 +97,4 @@
     </script>
 </body>
 </html>
-</html>
+
